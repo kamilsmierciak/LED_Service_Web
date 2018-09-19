@@ -15,12 +15,11 @@ public class HardwareDetails {
     @Column(name = "id", updatable = false, nullable = false)
     private String serial;
 
-    private Color color;
+    private Integer red;
+    private Integer green;
+    private Integer blue;
 
-    public HardwareDetails(String serial, Color color) {
-        this.serial = serial;
-        this.color = color;
-    }
+
 
     public HardwareDetails(String serial) {
         this.serial = serial;
@@ -30,15 +29,39 @@ public class HardwareDetails {
         return serial;
     }
 
+    public HardwareDetails(String serial, Integer red, Integer green, Integer blue) {
+        this.serial = serial;
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
+
+    public Integer getRed() {
+        return red;
+    }
+
+    public void setRed(Integer red) {
+        this.red = red;
+    }
+
+    public Integer getGreen() {
+        return green;
+    }
+
+    public void setGreen(Integer green) {
+        this.green = green;
+    }
+
+    public Integer getBlue() {
+        return blue;
+    }
+
+    public void setBlue(Integer blue) {
+        this.blue = blue;
+    }
+
     public void setSerial(String serial) {
         this.serial = serial;
     }
 
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
 }

@@ -34,6 +34,9 @@ public class Hardware {
     //Constructor
 
 
+    public Hardware() {
+    }
+
     public Hardware(String serial, String type, Date addDate, boolean isRegistered, boolean isActive, HardwareDetails hardwareDetails) {
         this.serial = serial;
         this.type = type;
@@ -49,5 +52,63 @@ public class Hardware {
         this.addDate = addDate;
         this.isRegistered = isRegistered;
         this.isActive = isActive;
+    }
+    //getter and setter
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getSerial() {
+        return serial;
+    }
+
+    public void setSerial(String serial) {
+        this.serial = serial;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Date getAddDate() {
+        return addDate;
+    }
+
+    public void setAddDate(Date addDate) {
+        this.addDate = addDate;
+    }
+
+    public boolean isRegistered() {
+        return isRegistered;
+    }
+
+    public void setRegistered(boolean registered) {
+        isRegistered = registered;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public HardwareDetails getHardwareDetails() {
+        return hardwareDetails;
+    }
+
+    public void setHardwareDetails(HardwareDetails hardwareDetails) {
+        this.hardwareDetails = hardwareDetails;
     }
 }
